@@ -255,7 +255,7 @@ class RaporKontrol(QMainWindow):
         select.select_by_visible_text(vaka)
 
         #sleep(0.1)
-        buGun = strftime('%x')
+        buGun = strftime("%d.%m.%Y")
         TarihXpath = '/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input'
         TarihXpathInput = self.driver.find_element(By.XPATH, TarihXpath)
 
@@ -321,7 +321,7 @@ class RaporKontrol(QMainWindow):
         arsiveGoreRapor.click()
 
         #sleep(0.1)
-        buGun = strftime('%x')
+        buGun = strftime("%d.%m.%Y")
         TarihBaslangicXpath = '/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[1]/input'
         TarihBaslangicXpathInput = self.driver.find_element(By.XPATH, TarihBaslangicXpath)
 
@@ -330,7 +330,8 @@ class RaporKontrol(QMainWindow):
         TarihBaslangicXpathInput.send_keys(baslangicT)
 
         #sleep(0.1)
-        buGun = strftime('%x')
+        
+        n = strftime("%d.%m.%Y")
         TarihBitisXpath = '/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input'
         TarihBitisXpathInput = self.driver.find_element(By.XPATH, TarihBitisXpath)
 
